@@ -24,26 +24,28 @@ Is there a better way to do this?
 #COMMENTS
 Created to work with decimals up to the tenths place
 """
-import csv, random
 
-csv_file = open("occupations.csv")
+def weighted():
+    import csv
+    import random
 
-reader = csv.DictReader(csv_file)
+    #Reads CSV into program as "reader"
+    csv_file=open("occupations.csv")
+    reader=csv.reader(csv_file)
+    next(reader) #skip 1st
 
-#Taking data from csv and placing into db
-workforce_dict = {}
-tickets = []
+    wdict={}
+    for row in reader:
+        wdict[row[0]]=float(row[1]) #copies over the data from the csv into a dictionary
+   
+    #percentages represented out of 1000 to stay within integers
+    num=random.randint(1,998)
+    total=0;
 
-for row in reader:
-    workforce_dict[row['Job Class']] = float(row['Percentage'])
-    #changes the percentage into an integer out of 1000 so that it's easier to use
-    percentage = int(float(row['Percentage'])*10)
-    for i in range(percentage):
-        if(row['Job Class'] != 'Total'):
-            tickets.append(row['Job Class'])
-
-###Gets randomJob, weighted
-def randomJob(list):
-    return random.choice(list)
-
-print(randomJob(tickets))
+    #Likeliness of passing total is proportional to its percentage
+    for x in wdict.keys():
+        total=total+(wdict[x]*10)
+        if total>=num:
+            print(x)
+            break
+weighted()
