@@ -1,0 +1,13 @@
+Differences/Similarities: 
+Addition vs Subtraction
+- There were two main methods of computing the probability: addition and subtraction 
+- addition uses the cumulative sum of each of the probabilities at each occupation
+- subtraction subtracts each individual probability from the total until it reaches 0 or less than 0, then chooses whichever occupation caused that change
+- some of us defined test functions to see whether or not the probabilities of an occupation matched what was shows in the csv file
+- we also noticed that other groups took different approaches to the scaling of the probabilities
+- some used integers as percentages while others used floats
+- we found out that using random.choices() solves our problems — it allows us to pick random objects from a list using weights
+
+Questions: 
+- does using multiple decimal places and rounding for the probabilities change the chances of selecting a particular occupation?
+- Is there any meaningful difference between addition/subtraction methods? 

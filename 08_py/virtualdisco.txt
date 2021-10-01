@@ -1,0 +1,27 @@
+Team Scooby Doo: Sadid Ethun, Ivan Mijacika, Oscar Wang
+SoftDev
+K08: Cross Pollination and Virtual Insanity
+2021-09-30
+
+What is?
+- venv stands for virtual environemnt, which is a directory that contains a copy of python
+- the directory also comes with pip, which allows the user to install python libraries
+- in our case, the terminal command we executed created a virtual environment in the myzerohero directory
+- the myherozero/bin directory has all the pip and python directories needed to run code and install libraries
+
+Why use?
+- virtual environments allow developers to work on their python projects without needing to worry about having the right 
+versions of certain libraries
+- computers by default use the same directories to store third party libraries (the ones we have to install using pip), which may cause issues when different versions of a certain library is needed for two different projects
+- without a virtual environemnt, it becomes cumbersome to delete and redownload the correct version of the dependent library(ies) for each of the two projects
+
+How use? 
+- virtual environments can be activated by running `$ source env/bin/activate`
+- for our purposes, `env` should be repalced with `myherozero`
+- activating the virtual environemnt also changes the $PATH of the terminal (this can be checked by running `$ echo $PATH`)
+- to deactivate the virtual environment, run $ deactivate
+- now, running `$ echo $PATH` will return a different path than before
+
+Sources: 
+- https://docs.python.org/3/library/venv.html
+- https://realpython.com/python-virtual-environments-a-primer/
