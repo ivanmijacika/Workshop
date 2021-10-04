@@ -1,1 +1,21 @@
-Q0: 
+Bobby & Craig (Ivan Mijacika and Gavin McGinley)
+SoftDev
+K09 -- Using flask and a virtual python environment
+2021-10-03
+
+Q0: They syntax here is similar to java syntax when creating a new instance of a class.
+
+Q1: Well route makes it seem as if it is directing where something goes. Maybe it has to do with directories, and "/" can lead to the root directory.
+
+Q2: It will print wherever "/" lead it to, so maybe in the current directory in the terminal.
+	- __main__, which I'm assuming is __name__, was printed out in the terminal area, seperate from "No hablo queso!"
+
+Q3: No, "No hablo queso!" is returned but because the function itself is never printed that will not show anywhere through python.
+	- It showed up on the browser
+
+Q4: Again, it is simila to Java and it looks like running a function from within a class. 
+
+===============
+Discoveries: 
+	- "No hablo questo!" actually did show up!
+	- $python3 app.py didn't do anything initially and it was pretty confusing. It require extra steps and the involvement of a browser to be able to see any output.
