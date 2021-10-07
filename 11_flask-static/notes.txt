@@ -1,0 +1,24 @@
+Cool Dogs - Ishraq Mahid & Fish, Ivan Mijacika & Bob, and Gavin McGinley & Craig
+SoftDev
+k11 -- Flask Staticness -- Exploration of Flask framework -- We explored static webpages
+2021-10-6
+
+Summary:
+We explored the static site examples through flask. We had a folder called static, which we accessed by traveling through /static being tagged
+on to the url. We messed around with some html, exploring the premade static materials and creating our own static site displaying our roster. 
+We added some extra features to make our page a bit more interesting, helping us refresh some more on html in the process.
+
+
+Notes/Observations:
+
+- app.py looks similar to the ones from before
+- because the __name__ is __main__, it should still print out "No hablo queso!"
+- debugger will be turned on
+
+- there's a 'static' file with foo and foo.html
+	- foo doesn't have an end, so it is presented and treated as a plain text file
+- foo.html should say the stated text
+
+Questions: What is the full purpose of a static page? It still isn't completely clear to me.
+
+
