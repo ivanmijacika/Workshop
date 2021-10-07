@@ -1,0 +1,16 @@
+Cool Dogs - Ishraq Mahid & Fish, Ivan Mijacika & Bob, and Gavin McGinley & Craig
+SoftDev
+k12 -- ...or The Only Constant is Change? 
+2021-10-6
+
+Summary:
+
+Q0: If you remove render_template I think it will no longer be able to use templates, such as the model_tmplt in the templates folder.
+
+Q1: We can use the address from before "http://127.0.0.1:5000/" but with "my_foist_template" added on to the end
+
+Q2:'model_tmplt.html' is the template being used, 'collection=coll' determines that the list coll should be used within the template, and 'foo' should be the title of the html page.
+
+Notes/Observations:
+
+Questions: 
