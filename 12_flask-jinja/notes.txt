@@ -1,9 +1,11 @@
 Cool Dogs - Ishraq Mahid & Fish, Ivan Mijacika & Bob, and Gavin McGinley & Craig
 SoftDev
-k12 -- ...or The Only Constant is Change? 
-2021-10-6
+k12 -- Templates! 
+2021-10-7
 
-Summary:
+Summary: We first individually pulled notes-and-code and then quickly skimmed over the contents of the new assignment. 
+We discussed the questions within app.py and answered them in notes.txt. We mostly focused on the sy ntax in the html
+file and the structure of the template.
 
 Q0: If you remove render_template I think it will no longer be able to use templates, such as the model_tmplt in the templates folder.
 
@@ -11,6 +13,7 @@ Q1: We can use the address from before "http://127.0.0.1:5000/" but with "my_foi
 
 Q2:'model_tmplt.html' is the template being used, 'collection=coll' determines that the list coll should be used within the template, and 'foo' should be the title of the html page.
 
-Notes/Observations:
+- We expected the output to be different when "my_foist_template" was added at the end of the url, and it was. A 
+sequence of numbers was printed out as opposed to the usual "No hablo queso!"
 
-Questions: 
+Questions: How many different routes can you create from one file, and what's a good way to use that feature?
