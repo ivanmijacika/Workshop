@@ -1,0 +1,52 @@
+<!--
+  # Team Toast
+  # Ivan Mijacika, Rayat Roy, Haotian Gan (Duckies: Cinnamon, Bob, Zippy Frog)
+  # SoftDev
+  # K13
+  # 10-08-2021
+  
+  --->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-size: 1rem;
+      }
+      td {
+        padding: 0 3rem 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h6>
+      Team Toast <br />
+      Ivan Mijacika, Rayat Roy, Haotian Gan (Duckies: Cinnamon, Bob, Zippy Frog)
+      <br />
+      SoftDev <br />
+      K13 <br />
+      10-08-2021
+    </h6>
+    <p>
+      A randomly chose occupation from below:
+      <a href="{{occupations[choice][1]}}"><b>{{choice}}</b></a>
+    </p>
+
+    <table>
+      <tr>
+        <td><b>Occupation</b></td>
+        <td><b>Percentage</b></td>
+      </tr>
+      {% for item in occupations %}
+      <tr>
+        <td>{{item}}</td>
+        <td>{{occupations[item][0]}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

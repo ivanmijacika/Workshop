@@ -1,0 +1,11 @@
+Summary: We went over our code from previous assignments, specifically K10 as it can serve as the foundation for K13. We then worked through the assingment, building off of previous code and adding the use of templates.
+
+Notes:
+The structure of a for loop for flask's templating engine is:
+
+{% for x in iterable %}
+
+{% endfor %}
+
+EGO:
+Egoless programming involves removing the "I" from code (literally what the word says). Rather than seeing programs in development as belonging to some individual, we should see them simply as a thing independent of ownership. When people tie themselves to their code, they overlook errors and regard feedback as a personal attack. To create a culture of egoless programming, any devo's work should be in their mind part of the collective, and they should look often for others to review and give honest feedback on their code and be willing to do the same.
