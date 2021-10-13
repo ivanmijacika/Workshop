@@ -1,47 +1,42 @@
-def csvReader():
-    import csv
 
-    csv_file = open("occupations.csv")
-    reader = csv.reader(csv_file)
-    return reader
+# Team Toast
+# Ivan Mijacika, Rayat Roy, Haotian Gan (Duckies: Cinnamon, Bob, Zippy Frog)
+# SoftDev
+# K13
+# 10-08-2021
 
-#####
-def weighted():
-    import random
+import csv, random
 
-    reader = csvReader()
-    #skips first line
-    next(reader)
+#Function to read csv file and transfer it to an approriate dictionary
+def readfile(filename):
+    file = open(filename)
+    csvreader = csv.reader(file)
+    next(csvreader) #Skip first line
+    occupations = {}
+    for row in csvreader:
+        if row[0] != "Total": #Don't include line with the total
+            occupations[row[0]] = row[1], row[2]
+    file.close()
+    return occupations
 
-    #Adds CSV info to dictionary
-    wdict={}
-    for row in reader:
-        wdict[row[0]]=float(row[1])
+#Using the weights provided in percentages, generate a randomly selected occupation
+def generateRandom(occupations):
+    ran = random.random() * 100
+    for row in occupations:
+        holder = occupations.get(row)[0]
+        ran -= float(holder)
+        if ran <= 0:
+            return row
+    return "Unemployed" #if user never reaches 0, they are unemployed   
 
-    #Randomly generates number    
-    num=random.randint(1,998) #instead of putting 998, we can also input total to possibly improve scalabiliyt?
-    total=0
 
-    #Likeliness of passing total is proportional to its percentage
-    for x in wdict.keys():
-        total=total+(wdict[x]*10)
-        if total>=num:
-            return(x)
+from flask import Flask, render_template
+app = Flask(__name__) #create instance of class Flask
 
-def generateTableStr(highlight):
-    reader = csvReader()
+@app.route("/occupyflaskst")       #assign fxn to route
+def hello_world():
+    file = readfile("data/occupations.csv")
+    choice = generateRandom(file)
+    return render_template('tablified.html', choice=choice, occupations=file)
 
-    #skips first line
-    next(reader)
-
-    #Adds CSV info to dictionary
-    returnString = ""
-    for row in reader:
-        
-        if row[0] != "Total":
-            if(highlight and row[0] == highlight):
-                    returnString+="<mark>"
-                    returnString += row[0] + "</mark>" + "<br>"
-            else:
-                returnString += row[0] + "<br>"
-
+app.run(debug=True)
