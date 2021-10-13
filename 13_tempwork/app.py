@@ -2,7 +2,7 @@
 # Ivan Mijacika, Rayat Roy, Haotian Gan (Duckies: Cinnamon, Bob, Zippy Frog)
 # SoftDev
 # K13
-# 10-13-2021
+# 10-08-2021
 
 import csv, random
 
