@@ -1,0 +1,14 @@
+Waahoos: Alejandro Alonso, Ivan Mijacika, William Chen
+SoftDev
+K14 -- Form and Function
+2021-10-14
+
+Predictions for uncommenting lines:
+Should work as normal, and return the username submitted.
+
+Results for uncommenting lines:
+The first function throws an error when the line print(request.args['username']) are uncommented because the first function is
+generating the webpage and therefore has not recieved a submission from the form. Due to this, the
+args dictionary is empty, and args['username'] cannot be called. Second function returns the username
+inputted.
+
