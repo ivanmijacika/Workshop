@@ -1,0 +1,17 @@
+Waahoos: Alejandro Alonso, Ivan Mijacika, William Chen
+SoftDev
+K15 -- Sessions Greetings
+2021-10-20
+
+- We had to make choices between varrying options, especially in relation to the error page and where to place the conditionals
+- Using sessions was confusing at first, and we spent a large portion of our time learning how to use them and what errors they could produce.
+- We were initially missing a secret key, causing some problems.
+
+Resources:
+https://flask.palletsprojects.com/en/2.0.x/api/?highlight=session#flask.session
+https://stackoverflow.com/questions/41416411/flask-signing-in-and-signing-out
+https://www.tutorialspoint.com/flask/flask_sessions.htm
+https://overiq.com/flask-101/sessions-in-flask/
+https://pythonbasics.org/flask-sessions/
+https://testdriven.io/blog/flask-sessions/
+https://stackoverflow.com/questions/42601478/flask-calling-python-function-on-button-onclick-event

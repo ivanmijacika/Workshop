@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- 
+  Waahoos: Alejandro Alonso, Ivan Mijacika, William Chen
+  SoftDev
+  K15 -- Sessions Greetings
+  2021-10-20
+  response page for login.html using flask
+ -->
+
+<html>
+
+  <head>
+    <title> RESPONSE PAGE </title>
+  </head>
+
+  <body>
+    <h1> Waahoos </h1>
+    <h2> Alejandro Alonso, Ivan Mijacika, William Chen </h2>
+    <br>
+    <h3> Greetings Emperor {{ username }}! </h3>
+    <h4> Request Method: {{ request }} </h4>
+    <br>
+    <form action="/logout" method="post">
+      <button name="logout" type="submit">Logout</button>
+    </form>
+  </body>
+
+</html>
