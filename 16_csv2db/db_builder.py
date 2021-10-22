@@ -17,15 +17,21 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 def input_database(table, file):
     with open(file, 'r') as csvfile:
         data = csv.DictReader(csvfile)
-        c.execute(f"CREATE TABLE {table} (name TEXT, id INTEGER PRIMARY KEY);")
-        for row in data:
+        c.execute("CREATE TABLE y6 (code TEXT, mark INTEGER, id INTEGER PRIMARY KEY)")
+        c.execute("INSERT INTO y6 ('systems', 75, 1)")
+        """for row in data:
             values = ""
             for column in data.fieldnames:
+            	print(column)
+            	if type(row[column]) == STRING:
+            		val = '"'+row[column]+'"'
                 values += row[column] + ', '
             values = values[:-2]
-            c.execute(f"INSERT INTO {table} VALUES (" + values + ");")
+            print(values)
+            c.execute("INSERT INTO y5 VALUES (" + values + ")")
+        """
             
-input_database("x", "courses.csv")
+input_database("y6", "courses.csv")
 # < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
 
 
