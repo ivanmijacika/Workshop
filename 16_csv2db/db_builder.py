@@ -14,12 +14,23 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
-c.
+def input_database(table, file):
+    with open(file, 'r') as csvfile:
+        data = csv.DictReader(csvfile)
+        c.execute(f"CREATE TABLE {table} (name TEXT, id INTEGER PRIMARY KEY);")
+        for row in data:
+            values = ""
+            for column in data.fieldnames:
+                values += row[column] + ', '
+            values = values[:-2]
+            c.execute(f"INSERT INTO {table} VALUES (" + values + ");")
+            
+input_database("x", "courses.csv")
 # < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
 
 
-command = ".open discobandit.db"          # test SQL stmt in sqlite3 shell, save as string
-c.execute(command)    # run SQL statement
+#command = ".open discobandit.db"          # test SQL stmt in sqlite3 shell, save as string
+#c.execute(command)    # run SQL statement
 
 #==========================================================
 
