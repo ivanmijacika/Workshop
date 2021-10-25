@@ -1,3 +1,11 @@
+Waahoos: Alejandro Alonso, Ivan Mijacika, William Chen
+SoftDev
+K16 -- All About Database -- Sqlite3
+2021-10-25
+
 - Read through the instructions and carefully observed sqlite3 to learn how to use it
 - tested the different examples in the readme
+- spent a large portion of class on 10/22/21 fixing problems from the night before involving table creation after taking the data
+- ALTER TABLE is useful for... altering tables
+
 

@@ -1,44 +1,32 @@
-#Clyde "Thluffy" Sinclair
-#SoftDev  
-#skeleton/stub :: SQLITE3 BASICS
-#Dec 2020 -- The Time of the Rona
+"""
+Waahoos: Alejandro Alonso, Ivan Mijacika, William Chen
+SoftDev
+K16 -- All About Database -- Sqlite3
+2021-10-25
+"""
 
-import sqlite3   #enable control of an sqlite database
-import csv       #facilitate CSV I/O
+import csv, sqlite3
 
+con = sqlite3.connect("discobandit.db") # change to 'sqlite:///your_filename.db'
+cur = con.cursor()
 
-DB_FILE="discobandit.db"
+def crt_table(file, t):
+    """
+    creates a sql table named t given a csv file with 3 columns in discobandit.dbg
+    """
+    with open(file,'r') as fin:
+        data = csv.DictReader(fin)
+        #print("***DIAG: dictreader obj***")
+        headers = data.fieldnames
+        headers_str = "(" + ", ".join(data.fieldnames) + ")"
+        vals = [(row[headers[0]], row[headers[1]], row[headers[2]]) for row in data] #transferring dictreader values to a 2d array
+        #print("***DIAG: vals***")
 
-db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
-c = db.cursor()               #facilitate db ops -- you will use cursor to trigger db events
+    cur.execute(f"CREATE TABLE {t} {headers_str};") # creates table
+    cur.executemany(f"INSERT INTO {t} {headers_str} VALUES (?, ?, ?);", vals) #for row of values in list object vals, inserts the values into the table
 
-#==========================================================
+crt_table("students.csv", "students")
+crt_table("courses.csv", "courses")
 
-def input_database(table, file):
-    with open(file, 'r') as csvfile:
-        data = csv.DictReader(csvfile)
-        c.execute("CREATE TABLE y6 (code TEXT, mark INTEGER, id INTEGER PRIMARY KEY)")
-        c.execute("INSERT INTO y6 ('systems', 75, 1)")
-        """for row in data:
-            values = ""
-            for column in data.fieldnames:
-            	print(column)
-            	if type(row[column]) == STRING:
-            		val = '"'+row[column]+'"'
-                values += row[column] + ', '
-            values = values[:-2]
-            print(values)
-            c.execute("INSERT INTO y5 VALUES (" + values + ")")
-        """
-            
-input_database("y6", "courses.csv")
-# < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
-
-
-#command = ".open discobandit.db"          # test SQL stmt in sqlite3 shell, save as string
-#c.execute(command)    # run SQL statement
-
-#==========================================================
-
-db.commit() #save changes
-db.close()  #close database
+con.commit()
+con.close()
