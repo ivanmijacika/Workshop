@@ -1,0 +1,17 @@
+Momentous M's :: Ivan Mijacika, Justin Morrill
+SoftDev pd2
+K27 -- Basic functions in JavaScript
+2022-02-03
+
+
+DISCO
+-----------------------------------------------------------------
+* Java + scheme (kind of)
+* Unlike Java it seems types aren't necessary for specification
+=================================================================
+
+QCC
+-----------------------------------------------------------------
+* Are there typical java syntax practices are removed in javascript?
+=================================================================
+
