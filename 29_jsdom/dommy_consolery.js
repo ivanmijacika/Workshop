@@ -1,9 +1,8 @@
-// Team ____ :: Ivan Mijacika, Qina Liu
+// Quixotic Insects :: Qina Liu, Ivan Mijacika
 // SoftDev pd2
-// k29 -- DOMfoolery++
-// 2022-02-08
+// K29 -- DOMfoolery++
+// 2022-02-10
 // --------------------------------------------------
-
 
 
 //send diagnostic output to console
@@ -86,24 +85,26 @@ var fact = function(n){
     else return (n * fact(n-1))
 }
 
+
 let b1 = document.getElementById("b1");
-let b2 = doucment.getElementById("b2");
+let b2 = document.getElementById("b2");
 let b3 = document.getElementById("b3");
 
 
 let p3 = function(){
-        addItem("fib" + fib(2));
+        addItem("fib" + fib(5));
 }
 
 let p2 = function(){
-	addItem("gcd" + gcd(2, 4));
+        addItem("gcd" + gcd(20, 16));
 }
 
 let p1 = function(){
-	addItem("fact" + fact(2));
+        addItem("fact" + fact(5));
 }
 
-b.addEventListener('click', p1);
-b.addEventListener('click', p2);
-b.addEventListener('click', p3);
+b1.addEventListener('click', p1);
+b2.addEventListener('click', p2);
+b3.addEventListener('click', p3);
+
 
